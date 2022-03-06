@@ -1,3 +1,12 @@
+# Table of contents
+
+- [java 의 String 객체가 무엇인지 설명해봐라](#java--string---)
+  - [String은 원시타입인가?](#string-)
+  - [그러면 String은 스레드에서 안전한가?](#-string--)
+- [String 을 비교하는 방법 '==', 's1.equals(s2)' 의 차이는?](#string-----s1equalss2--)
+- [String, StringBuilder, StringBuffer 의 차이를 설명하라](#string-stringbuilder-stringbuffer---)
+  - [그렇다면 메소드 안에서 선언하여 사용시에는 어떤게 권장되는가?](#------)
+
 # java 의 String 객체가 무엇인지 설명해봐라
 
 String은 byte(8bit) 배열을 표현하는 **불변의 객체**다.
