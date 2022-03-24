@@ -31,5 +31,6 @@ java 8 도입. 하위 호환성을 위해 도입되었고 interface에 내용을
 
 abstract method를 구현해야만 일반 클래스로 정의가 가능하기 때문이다.
 
+# overloading 과 overriding 의 차이와 예시를 설명하라
 
 
