@@ -3,19 +3,22 @@
 
 # java.lang.Object에 정의되어있는 (public) method를 아는대로 나열해 보시오
  
- - toString
- - equals & hashcode
+ - **getClass**
+     - class 이름
+ - **clone**
+     - 인스턴스의 내용을 복사한 새 객체 생성
+ - **toString**
+ - **equals & hashcode**
      - 객체의 논리적인 일치 여부를 확인. equals의 오버라이딩엔 hashcode 구현도 필수다.
- 
- - finalize
+ - **finalize**
     - 호출 안하는 걸 권장. 가비지 컬렉션에게 객체 해제는 일임 하니까 굳이 개발자가 제어하지 않아도 된다.
- - clone
+ - **clone**
     - 객체의 복사. 오버라이딩 해 구체적으로 복사 가능
 
 ## java.lang.Object의 equals와 hashCode의 관계에 대해서 설명하시오
 
-equals 는 객체의 값이 동일한지 판별한다. (논리적 동치)
-hashcode 는 같은 객체인지 판별한다.
+equals 는 객체의 **값이 동일한지** 판별한다. (논리적 동치)
+hashcode 는 **같은 객체**인지 판별한다.
 
 둘다 기본적으로는 객체의 메모리주소를 기반으로 한다. `equals` 는 객체 주소가 동일한지를 보고, `hashcode`는 객체 메모리 주소의 해시 값을 본다.
 
