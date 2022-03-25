@@ -39,6 +39,14 @@ menu.get (new Food("burger"))
 해시 테이블에 넣은 모든 데이터가 같은 해시 버킷에 들어가기때문에 결국 리스트와 같이 필요 데이터를 찾으려면 전체 조회하게 될 것이다.
 
 
+## 원시타입 변수는 == 로 값의 비교가 가능한 이유는?
+
+원시타입 변수는 스택에 생성되지만 그 값은 상수 풀에 저장되어있다.
+스택에 메모리할당되는 원시타입 변수는 상수 풀에 있는 실제 값의 주소값을 참조하는 것이다.
+결국 == 는 값을 비교해 true or false가 나오지만 **내부에서 실제로는 주소비교인 것이다.**
+
+
+
 
 [Object class](https://opentutorials.org/module/516/6241)
 [hashcode, equals](https://jisooo.tistory.com/entry/java-hashcode%EC%99%80-equals-%EB%A9%94%EC%84%9C%EB%93%9C%EB%8A%94-%EC%96%B8%EC%A0%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B3%A0-%EC%99%9C-%EC%82%AC%EC%9A%A9%ED%95%A0%EA%B9%8C)
