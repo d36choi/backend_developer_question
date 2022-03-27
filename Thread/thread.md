@@ -1,4 +1,4 @@
-## Process & Thread 의 차이는?
+## Process & Thread 의 차이는? (만약 모르는 사람에게 비유를 들며 설명하자면)
 
 Process : 실행된 프로그램이 메모리에 적재되어 실행중인 인스턴스
 Thread : 프로세스의 흐름 단위
