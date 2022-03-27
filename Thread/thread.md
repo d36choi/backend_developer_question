@@ -13,7 +13,13 @@ Process 를 늘리면 가게에 필요한 가재도구를 똑같이 추가해야
 
 ## Thread 선언 시 사용하는 interface, class 는?
 interface 는 `Runnable` 를 확장, class는 `Thread` 를 상속하여 쓰레드를 만듭니다. 
+```java
+// Runnable
+public class Sample implements Runnable {...}
 
+Thread t = new Thread(new Sample(i));
+t.start();
+```
 interface를 선호하는 것이 일반적으로는 좋다고 보입니다. 왜냐하면 자바는 다중상속이 안되니까 Thread 를 상속하면 다른 클래스를 상속 못합니다.
 
 
