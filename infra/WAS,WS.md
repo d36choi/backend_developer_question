@@ -20,4 +20,13 @@
 
 
 
+## thread pool 이 무엇인가요?
+Task Queue 에서 task 가 하나씩 들어오면 관리자가 미리 생성된 스레드에 하나씩 task를 부여하는 방식이 스레드 풀입니다.  
+(쓰는 이유) 일이 생길때마다 쓰레드가 매번 생성, 소멸을 반복하다보면, 그 반복작업으로 생기는 비용은 무시못하기 때문에 미리 생성한 쓰레드들을 재사용하는 것이 이 패턴의 핵심입니다.  
+열려있는 스레드에 업무를 부여하고, 업무가 끝나면 스레드를 다시 오픈상태로 만듭니다.  
+  
+tomcat 은 server.xml 파일에서 thread pool size 를 설정가능합니다.  
+
+
+
 [WAS, WS](https://tecoble.techcourse.co.kr/post/2021-05-24-apache-tomcat/)
