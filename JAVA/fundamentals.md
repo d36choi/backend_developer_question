@@ -60,4 +60,5 @@ List<Intger> ids = new ArrayList<>();
 Map<String, List<String>> lessons = new HashMap<>();
 ```
 
+## private static final 의 의미?
 
