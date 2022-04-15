@@ -62,3 +62,9 @@ Map<String, List<String>> lessons = new HashMap<>();
 
 ## private static final 의 의미?
 
+
+## Exception 에 대해 설명해봐라
+모든 Exception은 Throwable을 상속합니다.  Error와 Exception으로 나뉘고 Exception은 우리 우리가 처리해야할 클래스고 Error는 시스템상 오류입니다.  
+Exception은 **checked**, **Unchecked로** 나뉩니다.checked는 우리가 빌드 전에 처리해야만 합니다.안 그럼 컴파일러가 거부를 합니다.  
+보통 IOException이나 SQLException이 있습니다.
+Unchecked는 런타임에 발생하는 예외입니다. NPE가 대표적입니다.  보통 try-catch-finally 문으로 예외를 처리해줍니다.
