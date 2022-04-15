@@ -63,6 +63,9 @@ http://www.dineshonjava.com/2012/07/bean-lifecycle-and-callbacks.html
 
 
 ## filter 와 interceptor 의 설명
-
+- filter : DispatcherServlet 이전에 request 가 거쳐갑니다. 로그인 세션이나 PC Mobile 분기, XSS 등을 처리 합니다.
+- interceptor : ApplicatonContext 내부에서 동작합니다. (filter는 밖) 따라서 빈으로 등록 가능합니다. 
+controller method 호출 전후, view resolve 전에 끼어들어 처리할 수 있습니다.  
 
 [spring-interview](https://www.baeldung.com/spring-interview-questions)
+[filter interceptor aop](https://goddaehee.tistory.com/154)
