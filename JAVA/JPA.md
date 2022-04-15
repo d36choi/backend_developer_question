@@ -52,3 +52,5 @@ N+1문제라는 것은, 개발자는 1개의 쿼리만이 수행될거라 기대
 @Query("select DISTINCT a from onwer a")
 List<Academy> findAllOwner();
 ```
+
+## 영속성 컨텍스트에 대해 설명해주세요
