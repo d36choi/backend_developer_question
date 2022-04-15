@@ -40,7 +40,7 @@ IoC 컨테이너가 관리하는 자바 Object 이고요. 기본적으로 Single
 ### 이중에서 뭐가 권장되나요?
 
 생성자주입입니다.   
-순홤참조가 발생하지 않습니다.    
+순환참조가 발생하지 않습니다.    
 객체 생성 시점에 해당 오브젝트들이 객체에 주입되는 것을 보장할 수 있습니다.  
 setter, field 주입은 그렇지않고도 객체를 생성할 수 있습니다. 주입되는 타이밍도 개발자에 따라 달라질 수 있습니다.  
 또한 생성자주입만이 `final`키워드로 초기화 할 수 있습니다.
@@ -59,7 +59,10 @@ AC는 스프링 컨테이너의 모든 정보, metadata 와 bean 을 포함한 �
 ## Bean 생성 주기에 대해
 http://www.dineshonjava.com/2012/07/bean-lifecycle-and-callbacks.html
 
+## Spring MVC Request Life Cycle
 
+
+## filter 와 interceptor 의 설명
 
 
 [spring-interview](https://www.baeldung.com/spring-interview-questions)
