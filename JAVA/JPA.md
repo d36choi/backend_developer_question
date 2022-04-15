@@ -37,3 +37,18 @@ JPA는 명세일 뿐이지 실제 동작을 하지는 않습니다. 구현체가
 ### 동작위치
 
 JAVA APP → JPA → JDBC → RDB
+
+
+## N+1 문제에 대해 설명해봐라
+N+1문제라는 것은, 개발자는 1개의 쿼리만이 수행될거라 기대했는데 N개 만큼의 쿼리가 추가로 호출되는 경우입니다. 
+예를 들어, 다대일 관계에서 (고양이 -> 주인) 주인을 findAll했는데 각 주인 row별로 고양이를 조회하는 쿼리가 실행이 된다는 것입니다.  
+
+- 해결법
+1.Join Fetch를 이용한다.
+`@Query("select DISTINCT a from owner a join fetch a.owner_id cat s join fetch s.onwer_id")`
+2. Entity Graph 를 이용한다.
+```java
+@EntityGraph(attributePaths = {"cats", "cats.owner_id"})
+@Query("select DISTINCT a from onwer a")
+List<Academy> findAllOwner();
+```
