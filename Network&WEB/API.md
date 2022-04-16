@@ -10,10 +10,10 @@
 ## restful api 를 설명하라
 
 ### HTTP to CRUD
-POST : Create
-GET : Read
-PUT,PATCH : Update
-DELETE : Delete
+- POST : Create
+- GET : Read
+- PUT,PATCH : Update
+- DELETE : Delete
 
 ### put, fetch 차이
 ### GET,POST 의 차이가 뭔거같냐?
