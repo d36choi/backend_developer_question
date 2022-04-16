@@ -52,3 +52,6 @@ HTTP는 stateless 한데 (즉 각 요청이 독립적. 서로 영향없음) TCP�
 - DNS 통해 IP주소 식별
 - TCP 통해 3way handshake 후 소켓 개방 및 연결
 
+
+## HTTPS 란?
+
