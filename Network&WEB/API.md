@@ -8,6 +8,12 @@
 400 → user 의 잘못이므로 알려줘야함. 500 → 서버의 잘못이고 클라이언트는 옳게 요청보냈음.
 
 ## restful api 를 설명하라
-### method들을 설명하라
+
+### HTTP to CRUD
+POST : Create
+GET : Read
+PUT,PATCH : Update
+DELETE : Delete
+
 ### put, fetch 차이
 ### GET,POST 의 차이가 뭔거같냐?
