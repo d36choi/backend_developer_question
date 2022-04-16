@@ -31,3 +31,24 @@ HTTP 는 Connectionless 한 통신이다. 매 요청마다 3way handshake를 통
 브라우저 캐시와 웹 서버 응답 파일의 컨텐츠 일치 여부를 판단한다.
 ETag 가 다르면 브라우저는 캐시된 내용과 다른 정적 컨텐츠가 내려온걸로 판단해 캐시를 지우고 새 컨텐츠를 그려준다.  
 
+## URI , URL 의 차이는 무엇인가요 ?
+Unifrom Resource Identifier 와 Location.  
+URI > URL 을 포함하는 개념입니다. 차이는 자원의 위치를 명시하느냐 자원의 식별까지 명시하느냐의 차이입니다.  
+`scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]`  
+XXX.com/index.html 에서 queryString 까지 명시가 된다면 그건 URI 이고 URL이 아닙니다.  
+
+
+## HTTP, TCP 의 차이 ?
+두 개가 배타적인 관계라고 하기는 어렵습니다.  
+계층이 응용계층인 규약과 transport 계층이기 때문이고요. HTTP는 TCP 를 거쳐 통신합니다.  
+HTTP는 stateless 한데 (즉 각 요청이 독립적. 서로 영향없음) TCP는 3way handshake를 통한 연결지향형 통신입니다.  
+다만 HTTP는 요청과 응답이 이루어지면 TCP 연결을 FIN 을 주며 끊어버리는 것입니다.  
+
+## www.naver.com 에 접속할 때 인터넷 세상에 일어나는 일의 과정 ?
+- 브라우저가 uri를 확인
+- http일 경우 해당 도메인 캐싱 되어 있는지 확인
+- DHCP서버에서 사용자 자신의 IP주소, 가장 가까운 라우터의 IP주소, 가장 가까운 DNS서버의 IP주소
+- ARP 통해서 가까운 라우터 주소 확인
+- DNS 통해 IP주소 식별
+- TCP 통해 3way handshake 후 소켓 개방 및 연결
+
