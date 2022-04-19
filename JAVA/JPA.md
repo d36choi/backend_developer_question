@@ -54,3 +54,6 @@ List<Academy> findAllOwner();
 ```
 
 ## 영속성 컨텍스트에 대해 설명해주세요
+
+## transaction의 propagation 설정에 관해
+
