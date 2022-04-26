@@ -35,3 +35,7 @@ put, patch를 쓰면 꼭 그렇게 되리라는 개념보다는 그렇게 규약
 3. **멱등성**
 
 - get 은 언제나 동일한 결과를 보여줍니다. only read
+
+
+## XML, JSON 의 특징을 말해보세요
+https://sujl95.tistory.com/59
