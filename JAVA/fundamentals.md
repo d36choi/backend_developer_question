@@ -61,7 +61,9 @@ Map<String, List<String>> lessons = new HashMap<>();
 ```
 
 ## private static final 의 의미?
-
+- private : 접근 제어자. 클래스 내에서만 접근 가능함을 의미합니다. private class 는 inner class 로만 가능합니다.
+- static : 클래스로더에 의해 메모리 영역에 정적 데이터를 할당합니다. 프로그램 종료 시까지 소멸되지 않습니다.
+- final : 불변의 class 를 만듭니다. 상속불가능으로 만듭니다.(대표적으로 String class) final 변수는 초기화 시 값이 더이상 변경되지 않습니다. 값의 불변성을 만듭니다.
 
 ## Exception 에 대해 설명해봐라
 모든 Exception은 Throwable을 상속합니다.  Error와 Exception으로 나뉘고 Exception은 우리 우리가 처리해야할 클래스고 Error는 시스템상 오류입니다.  
