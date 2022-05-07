@@ -72,5 +72,22 @@ Map<String, List<String>> lessons = new HashMap<>();
 ## Exception 에 대해 설명해봐라
 모든 Exception은 Throwable을 상속합니다.  Error와 Exception으로 나뉘고 Exception은 우리 우리가 처리해야할 클래스고 Error는 시스템상 오류입니다.  
 Exception은 **checked**, **Unchecked로** 나뉩니다.checked는 우리가 빌드 전에 처리해야만 합니다.안 그럼 컴파일러가 거부를 합니다.  
-보통 IOException이나 SQLException이 있습니다.
-Unchecked는 런타임에 발생하는 예외입니다. NPE가 대표적입니다.  보통 try-catch-finally 문으로 예외를 처리해줍니다.
+보통 IOException이나 SQLException이 있습니다.  
+Unchecked는 런타임에 발생하는 예외입니다. NPE가 대표적입니다.  보통 try-catch-finally 문으로 예외를 처리해줍니다.  
+
+## inheritance vs composition
+
+둘 다 클래스정의의 방법론이다. 
+상속은 is-a // 포함은 has-a 관계를 표현한다.  
+상속의 단점은 `상위클래스의 동작에 따라 하위 클래스의 동작이 코드 수정 없이 바뀔 수 있다.`  
+effective java item 18 번에 나와있다.  
+하위 클래스에서 상위 클래스 메서드를 재정의하면 상위클래스의 캡슐화를 깨뜨리게 된다. 상위 클래스 메서드의 내부 동작을 알지 못하면
+예기치 못한 오류가 발생할 수 있기 때문이다.  
+그래서 우리는 composition 을 활용해야 한다. composition 은 새로 만들 클래스의 내부 private 변수에 해당 클래스 인스턴스를 할당하면 된다.  
+이 클래스의 핵심은 상위 클래스에 새로운 기능을 덧씌워 새로운 클래스를 만드는 것이다. 이런걸 wrapper 클래스라고 한다.  
+자바는 다중상속을 하지 못하지만 이 패턴을 통해 다양한 구현체를 주입함으로써, 한 번의 클래스 작성으로 어떤 동일한 인터페이스 구현체도 활용할 수가 있다. 
+
+- 코드 재사용
+- 런타임 시에 구체 클래스 주입 가능
+- 컴포지션으로 다중 상속 구현 가능
+- 구현체 교체 쉬움  
