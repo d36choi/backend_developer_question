@@ -31,3 +31,21 @@ vue2 기준, vue3 는 다름. 더 세분화
 [vue3 변경점 정리](https://velog.io/@bluestragglr/Vue3-%EB%AC%B4%EC%97%87%EC%9D%B4-%EB%B0%94%EB%80%8C%EB%82%98%EC%9A%94)
 
 [vue 2](https://medium.com/witinweb/vue-js-%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-7780cdd97dd4)
+
+## vue Mixins 가 무엇인가?
+
+Mixin 은 재사용가능한 펑션들을 제공해준다. 이 재사용 가능한 메서드들을 기존 메서드들과 합쳐서 사용가능하다.
+Mixin gives us a way to distribute reusable functionalities in Vue components. These reusable functions are merged with existing functions. A mixin object can contain any component options. Let us take an example of mixin with created lifecycle which can be shared across components,
+
+```javascript
+const myMixin = {
+  created(){
+    console.log("Welcome to Mixins!")
+  }
+}
+var app = new Vue({
+  el: '#root',
+  mixins: [myMixin]
+})
+```
+Note: Multiple mixins can be specified in the mixin array of the component.
